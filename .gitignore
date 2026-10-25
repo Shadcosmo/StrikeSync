@@ -24,13 +24,13 @@ data/*.db-journal
 output/*
 !output/.gitkeep
 
-# Large or third-party video (keep locally, do not publish)
-assets/experts/*
-!assets/experts/.gitkeep
-!assets/experts/README.md
+# Generated uploads/exports only; expert clips in assets/experts are tracked
 *.mp4
 *.mov
 *.avi
+!assets/experts/*.mp4
+!assets/experts/*.mov
+!assets/experts/*.avi
 
 # Streamlit
 .streamlit/secrets.toml

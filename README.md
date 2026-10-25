@@ -19,7 +19,7 @@ StrikeSync/
 │   ├── database.py             # SQLite users and history
 │   └── paths.py                # Project paths
 ├── data/                       # Baselines (DB is created at runtime)
-├── assets/experts/             # Expert reference videos (local only)
+├── assets/experts/             # Expert reference videos
 ├── scripts/                    # One-off data utilities
 ├── output/                     # Generated analysis videos
 ├── .streamlit/config.toml      # Theme
@@ -44,19 +44,17 @@ streamlit run app.py
 
 ## Expert videos
 
-Place your own smash reference clips in `assets/experts/`. Name left-handed clips with `left` and right-handed clips with `right` so the tracker uses the correct arm.
+Reference smash clips ship in `assets/experts/`. Left-handed clips include `left` in the filename; right-handed clips include `right`.
 
-These files are gitignored. Do not commit broadcast or copyrighted player footage if you publish this repository.
-
-Without local clips, the app still scores against `data/expert_baselines.json`.
+You can add more clips to that folder. If none are present, scoring still falls back to `data/expert_baselines.json`.
 
 ```bash
 python scripts/generate_baselines.py
 ```
 
-## Privacy
+## Database
 
-User accounts live in a local SQLite file at `data/strikesync.db`. That file is gitignored and should not be published.
+No pre-built database is required. On first launch the app creates `data/strikesync.db` with empty `users` and `history` tables. Sign up to create an account, then run an analysis to start history. That file is gitignored so local accounts are not published.
 
 ## License
 
