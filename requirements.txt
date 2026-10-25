@@ -1,0 +1,7 @@
+streamlit>=1.40.0
+opencv-python>=4.8.0
+mediapipe>=0.10.14
+numpy>=1.26.0
+pandas>=2.0.0
+fastdtw>=0.3.4
+scikit-learn>=1.4.0

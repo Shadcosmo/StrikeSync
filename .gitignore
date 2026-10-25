@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environments
+venv/
+.venv/
+intel-env/
+env/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Local app data (users, sessions, generated video)
+data/*.db
+data/*.db-journal
+output/*
+!output/.gitkeep
+
+# Large or third-party video (keep locally, do not publish)
+assets/experts/*
+!assets/experts/.gitkeep
+!assets/experts/README.md
+*.mp4
+*.mov
+*.avi
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Environment
+.env
+.env.*
